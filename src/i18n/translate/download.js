@@ -1,6 +1,5 @@
 // place in translate/download.js
 const fs = require('fs');
-const mkdirp = require('mkdirp');
 const {
   loadSpreadsheet,
   localesPath,
@@ -62,20 +61,18 @@ async function fetchTranslationsFromSheetToJson(doc) {
 function checkAndMakeLocaleDir(dirPath, subDirs) {
   return new Promise((resolve) => {
     subDirs.forEach((subDir, index) => {
-      mkdirp(`${dirPath}/${subDir}`, (err) => {
-        if (err) {
-          throw err;
-        }
+      const isExist = fs.existsSync(`${dirPath}/${subDir}`);
+      if (!isExist) fs.mkdirSync(`${dirPath}/${subDir}`, { recursive: true });
 
-        if (index === subDirs.length - 1) {
-          resolve();
-        }
-      });
+      if (index === subDirs.length - 1) {
+        resolve();
+      }
     });
   });
 }
 
 async function updateJsonFromSheet() {
+  console.log({ localesPath, lngs });
   await checkAndMakeLocaleDir(localesPath, lngs);
 
   const doc = await loadSpreadsheet();

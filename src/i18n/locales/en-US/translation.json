@@ -1,13 +1,13 @@
 {
   "hello": "You did it!",
-  "greeting": "This project is built with",
-  "intro.documentation.head": "head",
-  "intro.documentation.link1": "document",
+  "greeting": "You've successfully created a project with",
+  "intro.documentation.head": "Documentation",
+  "intro.documentation.link1": "official documentation",
   "intro.documentation.link": "<a href='https://vuejs.org/' target='_blank' rel='noopener'>$t(intro.documentation.link1)</a>",
-  "intro.documentation.content": "content",
-  "intro.tooling.head": "head",
-  "intro.tooling.link": "link",
-  "intro.tooling.content": "content",
-  "intro.echosystem.head": "head",
-  "intro.echosystem.content": "content"
+  "intro.documentation.content": "Vue's $t(intro.documentation.link) provides you with all information you need to get started.",
+  "intro.tooling.head": "Tooling",
+  "intro.tooling.link": "<a href=\"https://vitejs.dev/guide/features.html\" target=\"_blank\" rel=\"noopener\">%{item}</a>",
+  "intro.tooling.content": "This project is served and bundled with\n$t(intro.tooling.link, { 'item': 'Vite' }). The  recommended IDE setup is $t(intro.tooling.link, { 'item': 'VSCode' }) + $t(intro.tooling.link, { 'item': 'Volar' }).\nIf you need to test your components and web pages, check out $t(intro.tooling.link, { 'item': 'Cypress' }) and $t(intro.tooling.link, { 'item': 'Cypress Component Testing' }).\n<br />\nMore instructions are available in <code>README.md</code>.",
+  "intro.echosystem.head": "Ecosystem",
+  "intro.echosystem.content": "Get official tools and libraries for your project: Pinia, Vue Router, Vue Test Utils, and Vue Dev Tools.\nIf you need more resources, we suggest paying Awesome Vue a visit."
 }
