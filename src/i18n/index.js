@@ -1,11 +1,10 @@
 // place in translate/index.js
 const { GoogleSpreadsheet } = require('google-spreadsheet');
 // TODO: insert google sheet API KEY
-const creds = require('./.credentials/your-app-credentials-some-unique-id.json');
+// const creds = require('./.credentials/your-app-credentials-some-unique-id.json');
 const i18nextConfig = require('./i18next-scanner.config');
 
-// TODO: insert google spread sheet doc id
-const spreadsheetDocId = 'your-spreadSheetDocId';
+const spreadsheetDocId = '1EPX9Jbea6ITWh8Gwv-HRHbAA1zpRn9fUed_39srHPLM';
 const ns = 'translation';
 const lngs = i18nextConfig.options.lngs;
 const loadPath = i18nextConfig.options.resource.loadPath;
@@ -17,8 +16,6 @@ const columnKeyToHeader = {
   key: '키',
   'ko-KR': '한글',
   'en-US': '영어',
-  // 'ja-JP': '일본어',
-  // 'zh-CN': '중국어',
 };
 
 /**
@@ -41,7 +38,11 @@ async function loadSpreadsheet() {
   const doc = new GoogleSpreadsheet(spreadsheetDocId);
 
   // load directly from json file if not in secure environment
-  await doc.useServiceAccountAuth(creds);
+  // await doc.useServiceAccountAuth(creds);
+  await doc.useServiceAccountAuth({
+    client_email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
+    private_key: process.env.GOOGLE_SERVICE_PRIVATE_KEY,
+  });
 
   await doc.loadInfo(); // loads document properties and worksheets
 
