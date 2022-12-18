@@ -38,10 +38,10 @@ function getResources(lngs) {
   return resources;
 }
 
-export function initializeI18next(lng = 'ko') {
+export function initializeI18next(lng = 'en') {
   i18next.init({
     lng,
-    fallbackLng: 'ko',
+    fallbackLng: 'en',
     returnEmptyString: false,
     keySeparator: false,
     nsSeparator: false,

@@ -5,7 +5,9 @@ import i18NextVue from 'i18next-vue';
 import './assets/main.css';
 import { initializeI18next, i18n } from './i18n/i18next';
 
-initializeI18next('ko');
+const lang = navigator.language.split('-')[0];
+console.log({ lang });
+initializeI18next(lang);
 // initializeI18next('en');
 
 const app = createApp(App);
