@@ -1,0 +1,22 @@
+{
+  "hello": "You did it!",
+  "greeting": "You've successfully created a project with",
+  "intro.documentation.head": "Documentation",
+  "intro.documentation.link1": "official documentation",
+  "intro.documentation.link": "<a href='https://vuejs.org/' target='_blank' rel='noopener'>$t(intro.documentation.link1)</a>",
+  "intro.documentation.content": "Vue's $t(intro.documentation.link) provides you with all information you need to get started.",
+  "intro.tooling.head": "Tooling",
+  "intro.tooling.link": "<a href=\"https://vitejs.dev/guide/features.html\" target=\"_blank\" rel=\"noopener\">%{item}</a>",
+  "intro.tooling.content": "This project is served and bundled with\n$t(intro.tooling.link, { 'item': 'Vite' }). The  recommended IDE setup is $t(intro.tooling.link, { 'item': 'VSCode' }) + $t(intro.tooling.link, { 'item': 'Volar' }).\nIf you need to test your components and web pages, check out $t(intro.tooling.link, { 'item': 'Cypress' }) and $t(intro.tooling.link, { 'item': 'Cypress Component Testing' }).\n<br />\nMore instructions are available in <code>README.md</code>.",
+  "intro.echosystem.head": "Ecosystem",
+  "intro.echosystem.content": "Get official tools and libraries for your project: Pinia, Vue Router, Vue Test Utils, and Vue Dev Tools.\nIf you need more resources, we suggest paying Awesome Vue a visit.",
+  "intro.community.head": "Community",
+  "intro.community.link1": "<a href=\"https://chat.vuejs.org\" target=\"_blank\" rel=\"noopener\">Vue Land</a>",
+  "intro.community.link2": "<a href=\"https://stackoverflow.com/questions/tagged/vue.js\" target=\"_blank\" rel=\"noopener\">StackOverflow</a>",
+  "intro.community.link3": "<a href=\"https://news.vuejs.org\" target=\"_blank\" rel=\"noopener\">our mailing list</a>",
+  "intro.community.link4": "<a href=\"https://twitter.com/vuejs\" target=\"_blank\" rel=\"noopener\">@vuejs</a>",
+  "intro.community.content": "Got stuck? Ask your question on $t(intro.community.link1), our official Discord server, or $t(intro.community.link2). You should also subscribe to $t(intro.community.link3) and follow the official $t(intro.community.link4) twitter account for latest news in the Vue world.",
+  "intro.support.head": "Support Vue",
+  "intro.support.link": "<a href=\"https://vuejs.org/sponsor/\" target=\"_blank\" rel=\"noopener\">becoming a sponsor</a>",
+  "intro.support.content": "As an independent project, Vue relies on community backing for its sustainability. You can help us by $t(intro.support.link)."
+}

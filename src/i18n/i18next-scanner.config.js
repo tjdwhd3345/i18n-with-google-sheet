@@ -5,8 +5,8 @@ const COMMON_EXTENSIONS = '/**/*.{js,vue,html}';
 module.exports = {
   input: [`src/components${COMMON_EXTENSIONS}`],
   options: {
-    defaultLng: 'ko-KR',
-    lngs: ['ko-KR', 'en-US'],
+    defaultLng: 'ko',
+    lngs: ['ko', 'en'],
     func: {
       list: ['\\$t', 'this.\\$t', '\\$i18n.t'],
       extensions: ['.js', '.vue', '.html'],
@@ -18,7 +18,7 @@ module.exports = {
       savePath: path.join(__dirname, 'locales/{{lng}}/{{ns}}.json'),
     },
     defaultValue(lng, ns, key) {
-      const keyAsDefaultValue = ['ko-KR'];
+      const keyAsDefaultValue = ['ko'];
       if (keyAsDefaultValue.includes(lng)) {
         const separator = '~~';
         const value = key.includes(separator) ? key.split(separator)[1] : key;

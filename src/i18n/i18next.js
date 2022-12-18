@@ -1,9 +1,9 @@
 // place in plugins/i18next.js
 import i18next from 'i18next';
-import ko_KR from './locales/ko-KR/translation.json';
-import en_US from './locales/en-US/translation.json';
+import ko from './locales/ko/translation.json';
+import en from './locales/en/translation.json';
 
-const lngs = ['ko-KR', 'en-US'];
+const lngs = ['ko', 'en'];
 /**
  * Must add new language here
  * @param lng {Language} language
@@ -13,15 +13,14 @@ function loadResource(lng) {
   let module;
 
   switch (lng) {
-    case 'ko-KR': {
-      module = ko_KR;
+    case 'ko':
+      module = ko;
       break;
-    }
-    case 'en-US': {
-      module = en_US;
+    case 'en':
+      module = en;
       break;
-    }
     default:
+      module = ko;
       break;
   }
 
@@ -39,10 +38,10 @@ function getResources(lngs) {
   return resources;
 }
 
-export function initializeI18next(lng = 'ko-KR') {
+export function initializeI18next(lng = 'ko') {
   i18next.init({
     lng,
-    fallbackLng: 'ko-KR',
+    fallbackLng: 'ko',
     returnEmptyString: false,
     keySeparator: false,
     nsSeparator: false,

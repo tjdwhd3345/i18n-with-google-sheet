@@ -19,8 +19,8 @@ const sheetId = 1626267583; // your sheet id
 const NOT_AVAILABLE_CELL = '_N/A';
 const columnKeyToHeader = {
   key: '키',
-  'ko-KR': '한글',
-  'en-US': '영어',
+  ko: '한글',
+  en: '영어',
 };
 
 /**
@@ -32,7 +32,7 @@ async function loadSpreadsheet() {
     '\u001B[32m',
     '=====================================================================================================================\n',
     '# i18next auto-sync using Spreadsheet\n\n',
-    '  * Download translation resources from Spreadsheet and make /assets/locales/{{lng}}/{{ns}}.json\n',
+    '  * Download translation resources from Spreadsheet and make /src/i18n/locales/{{lng}}/{{ns}}.json\n',
     '  * Upload translation resources to Spreadsheet.\n\n',
     `The Spreadsheet for translation is here (\u001B[34mhttps://docs.google.com/spreadsheets/d/${spreadsheetDocId}/#gid=${sheetId}\u001B[0m)\n`,
     '=====================================================================================================================',
