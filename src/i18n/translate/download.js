@@ -9,7 +9,7 @@ const {
   sheetId,
   columnKeyToHeader,
   NOT_AVAILABLE_CELL,
-} = require('../index');
+} = require('./index');
 
 /**
  * fetch translations from google spread sheet and transform to json

@@ -9,7 +9,7 @@ const {
   sheetId,
   columnKeyToHeader,
   NOT_AVAILABLE_CELL,
-} = require('../index');
+} = require('./index');
 
 const headerValues = ['키', '한글', '영어'];
 
@@ -24,8 +24,9 @@ async function addNewSheet(doc, title, sheetId) {
 }
 
 async function updateTranslationsFromKeyMapToSheet(doc, keyMap) {
-  const title = 'Your Sheet Title';
+  const title = '시트2';
   let sheet = doc.sheetsById[sheetId];
+  // console.log('sheet', { sheet });
   if (!sheet) {
     sheet = await addNewSheet(doc, title, sheetId);
   }
@@ -60,6 +61,7 @@ async function updateTranslationsFromKeyMapToSheet(doc, keyMap) {
 
   // upload new keys
   await sheet.addRows(addedRows);
+  console.log('=================\n * upload done *\n=================');
 }
 
 function toJson(keyMap) {
@@ -99,8 +101,9 @@ function gatherKeyMap(keyMap, lng, json) {
 
 async function updateSheetFromJson() {
   const doc = await loadSpreadsheet();
-
+  console.log('doc', { localesPath });
   fs.readdir(localesPath, (error, lngs) => {
+    console.log('fs.readdir', { lngs });
     if (error) {
       throw error;
     }
