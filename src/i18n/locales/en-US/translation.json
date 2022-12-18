@@ -1,0 +1,11 @@
+{
+  "hello": "hello",
+  "greeting": "greeting",
+  "intro.documentation.head": "head",
+  "intro.documentation.content": "content",
+  "intro.tooling.head": "head",
+  "intro.tooling.link": "link",
+  "intro.tooling.content": "content",
+  "intro.echosystem.head": "head",
+  "intro.echosystem.content": "content"
+}

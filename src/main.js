@@ -1,6 +1,13 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from 'vue';
+import App from './App.vue';
+// import i18next from 'i18next';
+import i18NextVue from 'i18next-vue';
+import './assets/main.css';
+import { initializeI18next, i18n } from './i18n/i18next';
 
-import './assets/main.css'
+initializeI18next('ko-KR');
+// initializeI18next('en-US');
 
-createApp(App).mount('#app')
+const app = createApp(App);
+app.use(i18NextVue, { i18next: i18n });
+app.mount('#app');

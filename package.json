@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "npm run download:i18n && vite",
+    "dev": "npm run i18n:download && vite",
     "build": "vite build",
     "preview": "vite preview",
     "i18n:scan": "i18next-scanner --config src/i18n/i18next-scanner.config.js",
@@ -12,6 +12,7 @@
     "serve": "npm run i18n:download && vue-cli-service serve"
   },
   "dependencies": {
+    "dotenv": "^16.0.3",
     "i18next-vue": "^2.1.1",
     "vue": "^3.2.45"
   },
