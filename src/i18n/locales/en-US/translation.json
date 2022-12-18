@@ -1,7 +1,9 @@
 {
-  "hello": "hello",
-  "greeting": "greeting",
+  "hello": "You did it!",
+  "greeting": "This project is built with",
   "intro.documentation.head": "head",
+  "intro.documentation.link1": "document",
+  "intro.documentation.link": "<a href='https://vuejs.org/' target='_blank' rel='noopener'>$t(intro.documentation.link1)</a>",
   "intro.documentation.content": "content",
   "intro.tooling.head": "head",
   "intro.tooling.link": "link",
